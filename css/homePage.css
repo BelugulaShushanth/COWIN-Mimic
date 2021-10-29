@@ -1,0 +1,55 @@
+.fields{
+    margin-top: 10px;
+}
+.box{
+    margin: 0px 12px;
+}
+.vaccineName{
+    float: right;
+    color: #000080;
+    font-family: ui-rounded;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.age{
+    float: right;
+    color: purple;
+    font-weight: bold;
+}
+.feeType{
+    float: right;
+}
+.results{
+    font-family: serif;
+    text-align: center;
+    margin-top: 6px;
+    color: navy;
+    font-weight: 500;
+}
+.notAvaiable{
+    color: red;
+}
+.card-title{
+    font-family: 'Raleway';
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration: underline;
+    color: darkslateblue;
+}
+.capacity{
+    display: inline-block;
+    color: white;
+    margin-bottom: 8px;
+}
+p{
+    margin-bottom: 2px;
+}
+label.l{
+    padding: 2px 7px;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+.cost{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rebeccapurple;
+}
