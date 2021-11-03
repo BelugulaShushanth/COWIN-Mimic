@@ -192,6 +192,7 @@ img#covid-wallpaper {
     }
     #covid-wallpaper{
         height: 30em !important;
+        width: 100% !important;
     }
 
 }
