@@ -1,7 +1,10 @@
 let districtId = document.getElementById('district');
+let date = new Date();
 districtId.addEventListener("change", () => {
+    let dateSplit = date.toString().split(" ");
+    let fmDate = dateSplit[2]+"-"+(date.getMonth()+1)+"-"+dateSplit[3];
 
-    const FETCH_CENTERS_URL = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${districtId.value}&date=02-11-2021`;
+    const FETCH_CENTERS_URL = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${districtId.value}&date=${fmDate}`;
 
     fetch(FETCH_CENTERS_URL,{
         method: 'GET',
@@ -10,7 +13,7 @@ districtId.addEventListener("change", () => {
         return response.json()
     })
     .then((data) => {
-        console.log(data);
+        //console.log(data);
         let sessions = data.sessions;
         let sessionsId = document.getElementById('sessions');
         sessionsId.innerHTML = "";
