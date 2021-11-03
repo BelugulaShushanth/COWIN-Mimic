@@ -1,6 +1,10 @@
 let districtId = document.getElementById('district');
 let date = new Date();
 districtId.addEventListener("change", () => {
+
+    let wallpaper = document.getElementById('wallpaper');
+    wallpaper.style.display = "none";
+
     let dateSplit = date.toString().split(" ");
     let fmDate = dateSplit[2]+"-"+(date.getMonth()+1)+"-"+dateSplit[3];
 

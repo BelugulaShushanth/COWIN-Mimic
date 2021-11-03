@@ -101,6 +101,23 @@ select#state, select#district{
 a.btn.btn-primary {
     padding: 2px 30px;
 }
+img#covid-wallpaper {
+    width: 80%;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    height: 34em;
+    display: flex;
+    margin: auto;
+    margin-top: 2px;
+}
+.lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
 @media only screen and (min-width: 801px ){
     select{
         width: 60% !important;
@@ -137,6 +154,16 @@ a.btn.btn-primary {
 @media only screen and (max-width: 680px) {
     .col-1{
         width: 9% !important;
+    }
+}
+@media only screen and (max-width: 630px) and (min-width: 521px) {
+    .lead{
+       font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .lead{
+       font-size: 0.7rem;
     }
 }
 @media only screen and (max-width: 500px) {
