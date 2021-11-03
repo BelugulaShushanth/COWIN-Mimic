@@ -2,8 +2,14 @@ let districtId = document.getElementById('district');
 let date = new Date();
 districtId.addEventListener("change", () => {
 
+    let sessionsId = document.getElementById('sessions');
+    sessionsId.innerHTML = "";
+
     let wallpaper = document.getElementById('wallpaper');
     wallpaper.style.display = "none";
+
+    let loadingImg = document.getElementById('loadingImg');
+    loadingImg.classList.add('displayLoading');
 
     let dateSplit = date.toString().split(" ");
     let fmDate = dateSplit[2]+"-"+(date.getMonth()+1)+"-"+dateSplit[3];
@@ -19,8 +25,6 @@ districtId.addEventListener("change", () => {
     .then((data) => {
         //console.log(data);
         let sessions = data.sessions;
-        let sessionsId = document.getElementById('sessions');
-        sessionsId.innerHTML = "";
         if(sessions.length != 0){
             sessionsId.innerHTML = `<h4 class="results"> Showing results for ${sessions[0].district_name}, ${sessions[0].state_name} </h4>`;
         }
@@ -94,6 +98,7 @@ districtId.addEventListener("change", () => {
             </div>
           </div>`;
         }
+        loadingImg.classList.remove('displayLoading');
     })
 
 })
