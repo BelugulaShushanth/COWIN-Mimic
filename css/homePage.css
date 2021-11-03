@@ -190,6 +190,9 @@ img#covid-wallpaper {
     .age{
         font-size: 15px;
     }
+    #covid-wallpaper{
+        height: 30em !important;
+    }
 
 }
 
