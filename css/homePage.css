@@ -107,9 +107,15 @@ a.btn.btn-primary {
        
     }
 }
-@media only screen and (max-width: 800px ){
+@media only screen and (max-width: 800px ) and (min-width: 551px ){
     select{
         width: 80% !important;
+       
+    }
+}
+@media only screen and (max-width: 550px )  {
+    select{
+        width: 100% !important;
        
     }
 }
