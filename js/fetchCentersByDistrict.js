@@ -49,7 +49,6 @@ districtId.addEventListener("change", () => {
             <div class="card-body">
               <h5 class="card-title">
               ${sessions[i].name}
-              <span class="vaccineName">${sessions[i].vaccine}</span><br>
               <span class="badge feeType bg-${sessions[i].fee_type == "Paid" ? "danger" : "success"}">${sessions[i].fee_type}</span>
               </h5>
               <div class="capacity">
@@ -66,9 +65,11 @@ districtId.addEventListener("change", () => {
                 ${sessions[i].available_capacity_dose2}
                 </label>
               </div> <br>
-              <label class="cost">Cost: ${sessions[i].fee} Rs</label><br>
+              <label class="cost">Cost: ${sessions[i].fee} Rs</label>
+              <span class="vaccineName">${sessions[i].vaccine}</span>
+              <br>
               <div>
-                <div class="row">
+                <div class="row slotcol">
                     <div class="col-1">
                         <label> <b>Slots:</b> </label>
                     </div>
@@ -82,7 +83,7 @@ districtId.addEventListener("change", () => {
               </div>
               <b>Address:</b> <p class="card-text">${sessions[i].address}, ${sessions[i].pincode}</p>
               <span class="age">Age : ${sessions[i].min_age_limit} ${age_limit}</span>
-              <a href="#" class="btn btn-primary">Button</a>
+              <a href="#" class="btn btn-primary">Book Slot</a>
             </div>
           </div>`;
         }

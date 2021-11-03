@@ -5,11 +5,11 @@
     margin: 0px 12px;
 }
 .vaccineName{
-    float: right;
     color: #000080;
     font-family: ui-rounded;
     font-weight: bolder;
     font-size: 18px;
+    margin-left: 12px;
 }
 .age{
     float: right;
@@ -92,11 +92,72 @@ span.navbar-brand.mb-0.h1 {
 select#state, select#district{
     margin: auto;
 }
-@media screen and (min-width: 501px ){
+.row.slotcol {
+    margin-top: 8px;
+}
+.card-text {
+    width: 75%;
+}
+a.btn.btn-primary {
+    padding: 2px 30px;
+}
+@media only screen and (min-width: 801px ){
     select{
         width: 60% !important;
        
     }
+}
+@media only screen and (max-width: 800px ){
+    select{
+        width: 80% !important;
+       
+    }
+}
+@media only screen and (max-width: 1300px) and (min-width:1201px){
+    .col-1{
+        width: 4% !important;
+    }
+}
+@media only screen and (max-width: 1200px) and (min-width:1000px){
+    .col-1{
+        width: 4.6% !important;
+    }
+}
+@media only screen and (max-width: 999px) and (min-width:681px){
+    .col-1{
+        width: 7% !important;
+    }
+}
+@media only screen and (max-width: 680px) {
+    .col-1{
+        width: 9% !important;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .results{
+        font-size: 18px;
+    }
+    .card-title{
+        font-size: 18px;
+    }
+    .vaccineName{
+        font-size: 14px;
+    }
+    .badge{
+        padding: 0.2em 0.2em;
+    }
+    label.value{
+        font-size: 15px;
+        margin-right: 5px;
+    }
+    .slot{
+        padding: 2px 5px;
+        font-size: 14px;
+    }
+    .age{
+        font-size: 15px;
+    }
+
 }
 
 
