@@ -1,7 +1,7 @@
 let districtId = document.getElementById('district');
 districtId.addEventListener("change", () => {
 
-    const FETCH_CENTERS_URL = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${districtId.value}&date=28-10-2021`;
+    const FETCH_CENTERS_URL = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${districtId.value}&date=02-11-2021`;
 
     fetch(FETCH_CENTERS_URL,{
         method: 'GET',
@@ -27,6 +27,24 @@ districtId.addEventListener("change", () => {
             if(max_age_limit != undefined){
                 age_limit = ageStatus === true ? "& above": "to "+max_age_limit;
             }
+            let slots = ``;
+            let twoslots = "";
+            let slotsObj = sessions[i].slots;
+            slots = ` <div class="row one">
+                        <div class="col">
+                        <label class="slot">${slotsObj[0] == undefined ? "" : slotsObj[0]}</label>
+                        <label class="slot">${slotsObj[1] == undefined ? "" : slotsObj[1]} </label>
+                        </div>
+                      </div>`
+            if( slotsObj[2] !== undefined ){
+                    slots += `<div class="row">
+                        <div class="col">
+                        <label class="slot">${slotsObj[2] == undefined ? "" : slotsObj[2]}</label>
+                        <label class="slot">${slotsObj[3] == undefined ? "" : slotsObj[3]}</label>
+                        </div>
+                      </div>`
+            }
+           
             sessionsId.innerHTML += `<br> <div class="card w-95">
             <div class="card-body">
               <h5 class="card-title">
@@ -35,11 +53,33 @@ districtId.addEventListener("change", () => {
               <span class="badge feeType bg-${sessions[i].fee_type == "Paid" ? "danger" : "success"}">${sessions[i].fee_type}</span>
               </h5>
               <div class="capacity">
-                <label class="l bg-success">Total capacity: ${sessions[i].available_capacity}</label>
-                <label class="l bg-secondary">Dose1: ${sessions[i].available_capacity_dose1}</label>
-                <label class="l bg-secondary">Dose2: ${sessions[i].available_capacity_dose2}</label>
+                <label class="value">
+                 <label class="name">Total capacity:</label> 
+                 ${sessions[i].available_capacity}
+                 </label>
+                <label class="value">
+                <label class="name">Dose1:</label> 
+                ${sessions[i].available_capacity_dose1}
+                </label>
+                <label class="value">
+                <label class="name">Dose2:</label> 
+                ${sessions[i].available_capacity_dose2}
+                </label>
               </div> <br>
               <label class="cost">Cost: ${sessions[i].fee} Rs</label><br>
+              <div>
+                <div class="row">
+                    <div class="col-1">
+                        <label> <b>Slots:</b> </label>
+                    </div>
+                    <div class="col-11">
+                    <div class="row">
+                        <div class="col">${slots}</div>
+                    </div>
+                    </div>
+                </div>
+                <label></label>
+              </div>
               <b>Address:</b> <p class="card-text">${sessions[i].address}, ${sessions[i].pincode}</p>
               <span class="age">Age : ${sessions[i].min_age_limit} ${age_limit}</span>
               <a href="#" class="btn btn-primary">Button</a>

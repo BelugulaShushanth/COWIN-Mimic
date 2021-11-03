@@ -30,26 +30,73 @@
     color: red;
 }
 .card-title{
-    font-family: 'Raleway';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 22px;
     font-weight: 500;
-    text-decoration: underline;
-    color: darkslateblue;
+    color: black;
 }
 .capacity{
     display: inline-block;
     color: white;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
 }
 p{
     margin-bottom: 2px;
 }
-label.l{
-    padding: 2px 7px;
-    border-radius: 6px;
+label.value{
+    color: grey;
     margin-right: 15px;
+}
+label.name{
+    color: black;
 }
 .cost{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rebeccapurple;
 }
+.col-1{
+    width: 3.4% !important;
+}
+.slot{
+    box-shadow: 1px -1px 9px 1px rgba(0,0,0,0.09);
+-webkit-box-shadow: 1px -1px 9px 1px rgba(0,0,0,0.09);
+-moz-box-shadow: 1px -1px 9px 1px rgba(0,0,0,0.09);
+padding: 2px 15px;
+border-radius: 7px;
+color: grey;
+}
+.row.one{
+    margin-bottom: 4px;
+}
+.heading{
+    text-align: center;
+    align-items: center !important;
+    display: block !important;
+}
+.bg-light {
+    background-color: skyblue !important;
+}
+span.navbar-brand.mb-0.h1 {
+    color: white;
+    font-size: 25px;
+}
+.card-text{
+    width: 50%;
+}
+.state, .district{
+    align-items: center;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+select#state, select#district{
+    margin: auto;
+}
+@media screen and (min-width: 501px ){
+    select{
+        width: 60% !important;
+       
+    }
+}
+
+
