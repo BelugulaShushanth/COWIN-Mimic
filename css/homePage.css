@@ -58,12 +58,12 @@ label.name{
     width: 3.4% !important;
 }
 .slot{
-    box-shadow: 1px -1px 9px 1px rgba(0,0,0,0.09);
--webkit-box-shadow: 1px -1px 9px 1px rgba(0,0,0,0.09);
--moz-box-shadow: 1px -1px 9px 1px rgba(0,0,0,0.09);
-padding: 2px 15px;
-border-radius: 7px;
-color: grey;
+        box-shadow: 1px -1px 9px 1px rgba(0,0,0,0.09);
+    -webkit-box-shadow: 1px -1px 9px 1px rgba(0,0,0,0.09);
+    -moz-box-shadow: 1px -1px 9px 1px rgba(0,0,0,0.09);
+    padding: 2px 15px;
+    border-radius: 7px;
+    color: grey;
 }
 .row.one{
     margin-bottom: 4px;
@@ -232,12 +232,12 @@ svg.bi.bi-funnel{
         height: 30em !important;
         width: 100% !important;
     }
-    #filterBtn{
+    /* #filterBtn{
         padding: 0.1rem 0.35rem;
-    }
+    } */
 
 }
-@media only screen and (max-width: 611px) and (min-width:550px) {
+/* @media only screen and (max-width: 611px) and (min-width:550px) {
     label.filterStatus {
         font-size: 15px;
     }
@@ -259,12 +259,25 @@ svg.bi.bi-funnel{
     }
 
 }
-@media only screen and (max-width: 400px)  {
-    #filterBtn{
-        padding: 0.1rem 0.25rem;
-        font-size: 11px;
+*/
+@media only screen and (max-width: 450px) and (min-width: 401px)  {
+    label.filterStatus {
+        font-size: 15px;
+    }
+    #filterBtn {
+        padding: 0.1rem 0.5rem;
+        font-size: 15px;
     }
 
+} 
+@media only screen and (max-width: 401px)  {
+    label.filterStatus {
+        font-size: 14px;
+    }
+    #filterBtn {
+        padding: 0.1rem 0.3rem;
+        font-size: 13px;
+    }
 }
 
 

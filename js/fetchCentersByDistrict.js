@@ -83,7 +83,6 @@ function pullData(fmDate, selectedDate, selectedVaccine, selectedFeeType, select
             return response.json()
         })
         .then((data) => {
-            console.log(data);
             populateCenters(data, sessionsId, fmDate, selectedVaccine, selectedFeeType, selectedDose);
             loadingImg.classList.remove('displayLoading');
             // filterBtn.style.display = 'block';
@@ -100,18 +99,47 @@ function populateCenters(data, sessionsId, fmDate, selectedVaccine, selectedFeeT
     else {
         sessionsId.innerHTML = `<h4 class="results notAvaiable"> No vaccine centers available for the above selected state and district</h4>`;
     }
-
-    sessionsId.innerHTML += `<label class="filterStatus"><b>Date: </b>${fmDate}&nbsp;
+    
+    let filterBtnHtml = `<button id="filterBtn" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#filterModal">
+                                Filter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+                                </svg>
+                        </button><br>`;
+    
+    let filterStatusHtml1 = `<label class="filterStatus"><b>Date: </b>${fmDate}&nbsp;
                             <b>Vaccine Name: </b>${selectedVaccine === undefined ? "ALL" : selectedVaccine}&nbsp;
                             <b>Fee Type: </b>${selectedFeeType === undefined ? "ALL" : selectedFeeType}&nbsp;
                             <b>Dose: </b>${selectedDose === undefined ? "ALL" : selectedDose}
                             </label>
-                            <button id="filterBtn" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#filterModal">
-                                    Filter <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                                        <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-                                    </svg>
-                            </button><br>`;
+                            ${filterBtnHtml}`
+
+    let filterStatusHtml2 = `<div class="row">
+                                <div class="col-9">
+                                    <label class="filterStatus"><b>Date: </b>${fmDate}&nbsp;
+                                    <b>Vaccine Name: </b>${selectedVaccine === undefined ? "ALL" : selectedVaccine}&nbsp;
+                                    </label>
+                                    <br>
+                                    <label class="filterStatus">
+                                    <b>Fee Type: </b>${selectedFeeType === undefined ? "ALL" : selectedFeeType}&nbsp;
+                                    <b>Dose: </b>${selectedDose === undefined ? "ALL" : selectedDose}
+                                    </label>
+                                </div>
+                                <div class="col-3">
+                                    ${filterBtnHtml}
+                                </div>
+                            </div>`
+    
+    if(screen.width < 650){
+        sessionsId.innerHTML += filterStatusHtml2;
+    }
+    else{
+        sessionsId.innerHTML += filterStatusHtml1;
+    }
+    
+    
+    
+    
 
     for (let i = 0; i < sessions.length; i++) {
 
