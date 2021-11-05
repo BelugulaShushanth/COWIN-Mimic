@@ -260,9 +260,15 @@ svg.bi.bi-funnel{
 
 }
 */
+@media only screen and (max-width: 500px) and (min-width: 450px)  {
+    label.filterStatus {
+        font-size: 14px;
+    }
+
+} 
 @media only screen and (max-width: 450px) and (min-width: 401px)  {
     label.filterStatus {
-        font-size: 15px;
+        font-size: 12px;
     }
     #filterBtn {
         padding: 0.1rem 0.5rem;
@@ -270,13 +276,22 @@ svg.bi.bi-funnel{
     }
 
 } 
-@media only screen and (max-width: 401px)  {
+@media only screen and (max-width: 401px) and (min-width: 386px)  {
     label.filterStatus {
-        font-size: 14px;
+        font-size: 12px;
     }
     #filterBtn {
         padding: 0.1rem 0.3rem;
         font-size: 13px;
+    }
+}
+@media only screen and (max-width: 385px)  {
+    label.filterStatus {
+        font-size: 11px;
+    }
+    #filterBtn {
+        padding: 0.1rem 0.25rem;
+        font-size: 12px;
     }
 }
 
