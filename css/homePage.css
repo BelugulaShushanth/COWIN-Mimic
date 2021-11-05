@@ -122,6 +122,7 @@ img#covid-wallpaper {
 .loading{
     display: block;
     text-align: center;
+    margin-top: 15px;
 }
 img#loadingImg {
     width: 50px;
@@ -132,7 +133,28 @@ img#loadingImg {
 .displayLoading{
     display: block !important;
 }
-
+#filterBtn{
+    float: right;
+    padding: 0.1rem 0.8rem;
+}
+.modal-body{
+    padding: 0px;
+}
+.nav-pills{
+    margin: 0px;
+    margin-left: 8px;
+    background-color: lightgrey;
+}
+.nav-link{
+    color: black;
+}
+.dateOptObjLabel, .dateOptObj :hover {
+    cursor: pointer;
+}
+svg.bi.bi-funnel{
+    bottom: 2px;
+    position: relative;
+}
 
 @media only screen and (min-width: 801px ){
     select{
@@ -209,6 +231,38 @@ img#loadingImg {
     #covid-wallpaper{
         height: 30em !important;
         width: 100% !important;
+    }
+    #filterBtn{
+        padding: 0.1rem 0.35rem;
+    }
+
+}
+@media only screen and (max-width: 611px) and (min-width:550px) {
+    label.filterStatus {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 549px)  {
+    label.filterStatus {
+        font-size: 11px;
+    }
+    #filterBtn{
+        font-size: 13.5px;
+    }
+}
+@media only screen and (max-width: 425px)  {
+    label.filterStatus {
+        font-size: 10px;
+    }
+    #filterBtn{
+        font-size: 12px;
+    }
+
+}
+@media only screen and (max-width: 400px)  {
+    #filterBtn{
+        padding: 0.1rem 0.25rem;
+        font-size: 11px;
     }
 
 }

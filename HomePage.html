@@ -15,9 +15,9 @@
 
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid heading">
-          <span class="navbar-brand mb-0 h1">COWIN-MIMIC</span>
+            <span class="navbar-brand mb-0 h1">COWIN-MIMIC</span>
         </div>
-      </nav>
+    </nav>
 
     <div class="box">
         <div class="row fields">
@@ -37,22 +37,75 @@
                         style="width: 100%;">
                         <option selected>Select District</option>
                     </select>
-                </div>        
+                </div>
             </div>
         </div>
         <div class="loading">
             <img id="loadingImg" src="./images/loading.gif" alt="Loading">
         </div>
+       
 
         <div id="wallpaper">
             <p class="lead">
                 Select your state and district to view the COVID-19 vaccine centers.
-               </p>
+            </p>
             <img id="covid-wallpaper" src="./images/covid-wallpaper.gif" alt="Covid Wallpaper" />
         </div>
-        
-        <div id="sessions">
+
+        <div class="filter">
+            <!-- Button trigger modal -->
             
+
+            <!-- Modal -->
+            <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="filterModalLabel">Choose Your Filter</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex align-items-start">
+                                <div class="nav flex-column nav-pills me-3 filterOptions" id="v-pills-tab"
+                                    role="tablist" aria-orientation="vertical">
+                                    <button class="nav-link active dateFilter" id="v-pills-home-tab"
+                                        data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab"
+                                        aria-controls="v-pills-home" aria-selected="true">Date</button>
+                                    <button class="nav-link vaccineNameFilter" id="v-pills-profile-tab"
+                                        data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab"
+                                        aria-controls="v-pills-profile" aria-selected="false">Vacccine Name</button>
+                                    <button class="nav-link feeType" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                        data-bs-target="#v-pills-messages" type="button" role="tab"
+                                        aria-controls="v-pills-messages" aria-selected="false">Fee Type</button>
+                                    <button class="nav-link dose" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                        data-bs-target="#v-pills-settings" type="button" role="tab"
+                                        aria-controls="v-pills-settings" aria-selected="false">Dose</button>
+                                </div>
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    <div class="tab-pane fade show active dateContent" id="v-pills-home" role="tabpanel"
+                                        aria-labelledby="v-pills-home-tab">d</div>
+                                    <div class="tab-pane fade vaccineNameContent" id="v-pills-profile" role="tabpanel"
+                                        aria-labelledby="v-pills-profile-tab">v</div>
+                                    <div class="tab-pane fade feeTypeContent" id="v-pills-messages" role="tabpanel"
+                                        aria-labelledby="v-pills-messages-tab">f</div>
+                                    <div class="tab-pane fade doseContent" id="v-pills-settings" role="tabpanel"
+                                        aria-labelledby="v-pills-settings-tab">d</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                id="applyChanges">Apply Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sessions">
+
         </div>
     </div>
 
@@ -61,6 +114,9 @@
     <script src="./js/fetchStates.js"></script>
     <script src="./js/fetchDistrictById.js"></script>
     <script src="./js/fetchCentersByDistrict.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
