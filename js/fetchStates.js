@@ -15,12 +15,12 @@ window.onload = () => {
     if(token !== undefined && token!=null && token !== "" && token !== " " ){ //IF LOGGED IN
         login.classList.add('modalDontDisplay');
         logout.classList.add('modalDisplay');
-        notLoggedInModal.add('modalDontDisplay');
-        downloadCertModalLoggedIn.add('modalDisplay');
+        notLoggedInModal.classList.add('modalDontDisplay');
+        downloadCertModalLoggedIn.classList.add('modalDisplay');
     }
     else{// IF NOT LOGGED IN
-        notLoggedInModal.add('modalDisplay');
-        downloadCertModalLoggedIn.add('modalDontDisplay');
+        notLoggedInModal.classList.add('modalDisplay');
+        downloadCertModalLoggedIn.classList.add('modalDontDisplay');
     }
 
     // let login = document.getElementById('login');
