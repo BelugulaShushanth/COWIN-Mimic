@@ -155,6 +155,56 @@ svg.bi.bi-funnel{
     bottom: 2px;
     position: relative;
 }
+.downloadCert{
+    float: right;
+}
+.commonBtn{
+    float: right;
+}
+.modalLabel{
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+.modalInput{
+    margin-bottom: 15px;
+}
+.modelBtn{
+    margin-bottom: 6px;
+    padding: 0.1rem 0.9rem;
+}
+div#getOTPModal, div#verifyOTPModal, #notLoggedInModal, #downloadCertModal{
+    display: block;
+    text-align: center;
+    padding: 30px 2px 5px 2px;
+}
+div#verifyOTPModal{
+    display: none;
+}
+.modalDisplay{
+    display: block !important;
+}
+.modalDontDisplay{
+    display: none !important;
+}
+input#countryCode {
+    width: 40px;
+}
+.logout{
+    display: none;
+}
+.downloadCertBtn{
+    width: 10rem;
+    font-size: 13px;
+    padding: 4px 2px !important;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 901px ){
+    .fields{
+        margin-top: 45px;
+    }
+}
 
 @media only screen and (min-width: 801px ){
     select{
@@ -166,6 +216,9 @@ svg.bi.bi-funnel{
     select{
         width: 80% !important;
        
+    }
+    .downloadCertBtn{
+        margin-bottom: 5px;
     }
 }
 @media only screen and (max-width: 550px )  {
@@ -232,34 +285,13 @@ svg.bi.bi-funnel{
         height: 30em !important;
         width: 100% !important;
     }
-    /* #filterBtn{
-        padding: 0.1rem 0.35rem;
-    } */
-
-}
-/* @media only screen and (max-width: 611px) and (min-width:550px) {
-    label.filterStatus {
-        font-size: 15px;
-    }
-}
-@media only screen and (max-width: 549px)  {
-    label.filterStatus {
-        font-size: 11px;
-    }
-    #filterBtn{
-        font-size: 13.5px;
-    }
-}
-@media only screen and (max-width: 425px)  {
-    label.filterStatus {
-        font-size: 10px;
-    }
-    #filterBtn{
+    .downloadCertBtn{
+        width: 8rem;
         font-size: 12px;
+        padding: 2px;
     }
 
 }
-*/
 @media only screen and (max-width: 500px) and (min-width: 450px)  {
     label.filterStatus {
         font-size: 14px;
@@ -294,5 +326,6 @@ svg.bi.bi-funnel{
         font-size: 12px;
     }
 }
+
 
 
