@@ -173,7 +173,7 @@ svg.bi.bi-funnel{
     margin-bottom: 6px;
     padding: 0.1rem 0.9rem;
 }
-div#getOTPModal, div#verifyOTPModal, #notLoggedInModal, #downloadCertModal{
+.getOTPModal, .verifyOTPModal, .notLoggedInModal, .downloadCertModalLoggedIn{
     display: block;
     text-align: center;
     padding: 30px 2px 5px 2px;

@@ -9,10 +9,10 @@ window.onload = () => {
     let login = document.getElementById('login');
     let logout = document.getElementById('logout');
 
-    let notLoggedInModal = document.getElementById('notLoggedInModal');
-    let downloadCertModalLoggedIn = document.getElementById('downloadCertModalLoggedIn'); 
+    // let notLoggedInModal = document.getElementById('notLoggedInModal');
+    // let downloadCertModalLoggedIn = document.getElementById('downloadCertModalLoggedIn'); 
     
-    if(token !== undefined && token!=null && token !== "" && token !== " " ){//IF LOGGED IN
+    if(token !== undefined && token!=null && token !== "" && token !== " " ){ //IF LOGGED IN
         login.classList.add('modalDontDisplay');
         logout.classList.add('modalDisplay');
         // notLoggedInModal.add('modalDontDisplay');
