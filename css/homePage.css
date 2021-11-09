@@ -155,11 +155,9 @@ svg.bi.bi-funnel{
     bottom: 2px;
     position: relative;
 }
-.downloadCert{
-    float: right;
-}
 .commonBtn{
     float: right;
+    padding: 0.08rem 0.9rem;
 }
 .modalLabel{
     font-weight: 500;
@@ -194,6 +192,14 @@ input#countryCode {
     display: none;
 }
 .downloadCertBtn{
+    float: left;
+    width: 10rem;
+    font-size: 13px;
+    padding: 4px 2px !important;
+    margin-top: 10px;
+}
+.devInfo{
+    float: right;
     width: 10rem;
     font-size: 13px;
     padding: 4px 2px !important;
@@ -220,6 +226,64 @@ label#countdown {
 }
 #resendOTPBtn :hover{
     cursor: not-allowed !important;
+}
+.card.top{
+    width : 21rem;
+}
+.myimage{
+    width : 250px;
+    height: 250px;
+}
+@media screen and (min-width : 100px) and (max-width:990px) {
+.card.top{
+    width : 13rem;
+}
+.col.top{
+    width : 33%;
+}
+}
+@media screen and (min-width : 990px) and (max-width:1200px) {
+.card.top{
+    width : 18rem;
+}
+}
+@media screen and (min-width : 801px) and (max-width:1002px) {
+.myimage{
+    width : 250px;
+    height: 250px;
+}
+}
+@media screen and (min-width : 671px) and (max-width:800px) {
+    .myimage{
+        width : 200px;
+        height: 200px;
+    }
+    .aboutMeCard{
+        font-size: 12px;
+    }
+}
+@media screen and (min-width : 541px) and (max-width:670px) {
+    .myimage{
+        width : 150px;
+        height: 150px;
+    }
+    .aboutMeCard{
+        font-size: 12px;
+    }
+}
+@media screen and (min-width : 200px) and (max-width:540px) {
+    .myimage{
+        width : 110px;
+        height: 110px;
+    }
+    .aboutMeCard{
+        font-size: 10px;
+    }
+}
+@media screen and (min-width : 100px) and (max-width:996px) {
+.global{
+    width : 600px;
+}
 }
 
 @media only screen and (max-width: 901px ){
@@ -250,6 +314,9 @@ label#countdown {
 .toLogin :hover{
     cursor: pointer;
     color: black !important;
+}
+.aboutMeCard{
+    margin-top: 30px;
 }
 @media only screen and (max-width: 550px )  {
     select{
@@ -320,6 +387,9 @@ label#countdown {
         font-size: 12px;
         padding: 2px;
     }
+    .titleMain{
+        font-size: 18px !important;
+    }
 
 }
 @media only screen and (max-width: 500px) and (min-width: 450px)  {
@@ -355,6 +425,24 @@ label#countdown {
         padding: 0.1rem 0.25rem;
         font-size: 12px;
     }
+}
+@media only screen and (max-width: 435px)  {
+    li, .cell{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 425px)  {
+    .aboutMeCard{
+        font-size: 9px;
+    }
+    li, .cell{
+        font-size: 10px;
+    }
+    .myimage{
+        width : 90px;
+        height: 90px;
+    }
+
 }
 
 
