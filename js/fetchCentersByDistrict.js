@@ -227,7 +227,7 @@ function populateCenters(data, sessionsId, fmDate, selectedVaccine, selectedFeeT
               </div>
               <b>Address:</b> <p class="card-text">${sessions[i].address}, ${sessions[i].pincode}</p>
               <span class="age">Age : ${sessions[i].min_age_limit} ${age_limit}</span>
-              <a href="#" class="btn btn-primary">Book Slot</a>
+              <a href="https://selfregistration.cowin.gov.in/" target="_blank" class="btn btn-primary">Book Slot</a>
             </div>
           </div>`;
     }
