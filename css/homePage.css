@@ -234,6 +234,13 @@ label#countdown {
     width : 250px;
     height: 250px;
 }
+.about2{
+    margin-top: 20px;
+}
+.aboutMePara{
+    text-align: justify;
+  text-justify: inter-word;
+}
 @media screen and (min-width : 100px) and (max-width:990px) {
 .card.top{
     width : 13rem;
