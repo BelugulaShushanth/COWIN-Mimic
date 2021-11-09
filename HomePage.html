@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,8 +53,11 @@
                                     <label class="modalLabel">Enter OTP</label>
                                     <br><input type="tel" class="modalInput" id="otp" pattern="^\d{6}$"
                                         required="required" placeholder="Enter 6 digit OTP" />
+                                      <br>  
+                                      <label id="countdown" class="countdown"></label>
                                     <br><button type="submit" class="btn btn-primary modelBtn" id="verifyOTPBtn">Verify
                                         OTP</button>
+                                        <button type="button" class="btn btn-secondary modelBtn" id="resendOTPBtn" disabled>Resend OTP</button>
                                 </div>
                             </form>
 
@@ -86,23 +90,26 @@
                     <div class="modal-body">
                         <div class="container">
                             <div class="notLoggedInModal" id="notLoggedInModal">
-                                <label class="modalLabel">Please log in to download certificate</label>
-                                <br><label><a>Click here to login</a></label>
+                                <label class="modalLabel">Please login to download certificate</label>
+                                <br><label class="toLogin" id="toLogin"><a>Click here to login</a></label>
                             </div>
 
                             <form method="post" id="downloadCertForm">
                                 <div class="downloadCertModalLoggedIn" id="downloadCertModalLoggedIn">
-                                    <label class="modalLabel">Enter Beneficiary Id</label>
-                                    <br><input type="tel" class="modalInput" id="beneficiaryId" pattern="^\d{6}$"
+                                    <label class="modalLabel">Enter Beneficiary Reference Id</label>
+                                    <br><input type="tel" class="modalInput" id="beneficiaryId"
                                         required="required" placeholder="Beneficiary Id" />
                                     <br><button type="submit" class="btn btn-primary modelBtn" id="downloadCertBtn">Download Certificate</button>
+                                    <div class="spinner-border" role="status" id="downloadCertLoading">
+                                        <span class="visually-hidden">Loading...</span>
+                                      </div>
                                 </div>
                             </form>
 
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" id="close"
+                        <button type="button" class="btn btn-secondary" id="close2"
                             data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>

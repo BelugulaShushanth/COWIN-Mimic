@@ -199,6 +199,28 @@ input#countryCode {
     padding: 4px 2px !important;
     margin-top: 10px;
 }
+.spinner-border{
+    position: relative;
+    width: 25px !important;
+    height: 25px !important;
+    top: 3px;
+    display: none !important;
+}
+.display-spinner{
+   display: inline-block !important;
+}
+label#countdown {
+    color: yellowgreen !important;
+    text-align: center;
+    align-items: center;
+    display: block;
+}
+.changeCountdown{
+    color: red !important;
+}
+#resendOTPBtn :hover{
+    cursor: not-allowed !important;
+}
 
 @media only screen and (max-width: 901px ){
     .fields{
@@ -220,6 +242,14 @@ input#countryCode {
     .downloadCertBtn{
         margin-bottom: 5px;
     }
+}
+.toLogin{
+    text-decoration: underline;
+    color: blue;
+}
+.toLogin :hover{
+    cursor: pointer;
+    color: black !important;
 }
 @media only screen and (max-width: 550px )  {
     select{

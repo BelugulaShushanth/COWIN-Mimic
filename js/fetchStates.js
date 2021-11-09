@@ -4,21 +4,19 @@ window.onload = () => {
 
     let token = getCookie("token");
 
-    console.log(token);
-
     let login = document.getElementById('login');
     let logout = document.getElementById('logout');
 
     let notLoggedInModal = document.getElementById('notLoggedInModal');
-    let downloadCertModalLoggedIn = document.getElementById('downloadCertModalLoggedIn'); 
-    
-    if(token !== undefined && token!=null && token !== "" && token !== " " ){ //IF LOGGED IN
+    let downloadCertModalLoggedIn = document.getElementById('downloadCertModalLoggedIn');
+
+    if (token !== undefined && token != null && token !== "" && token !== " ") { //IF LOGGED IN
         login.classList.add('modalDontDisplay');
         logout.classList.add('modalDisplay');
         notLoggedInModal.classList.add('modalDontDisplay');
         downloadCertModalLoggedIn.classList.add('modalDisplay');
     }
-    else{// IF NOT LOGGED IN
+    else {// IF NOT LOGGED IN
         notLoggedInModal.classList.add('modalDisplay');
         downloadCertModalLoggedIn.classList.add('modalDontDisplay');
     }
@@ -46,14 +44,14 @@ function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
     }
     return null;
-  }
+}
