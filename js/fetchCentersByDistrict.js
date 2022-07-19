@@ -176,15 +176,15 @@ function populateCenters(data, sessionsId, fmDate, selectedVaccine, selectedFeeT
         let slotsObj = sessions[i].slots;
         let slots = ` <div class="row one">
                         <div class="col">
-                        <label class="slot">${slotsObj[0] == undefined ? "" : slotsObj[0]}</label>
-                        <label class="slot">${slotsObj[1] == undefined ? "" : slotsObj[1]} </label>
+                        <label class="slot">${slotsObj[0].time == undefined ? "" : slotsObj[0].time}</label>
+                        <label class="slot">${slotsObj[1].time == undefined ? "" : slotsObj[1].time} </label>
                         </div>
                       </div>`
         if (slotsObj[2] !== undefined) {
             slots += `<div class="row">
                         <div class="col">
-                        <label class="slot">${slotsObj[2] == undefined ? "" : slotsObj[2]}</label>
-                        <label class="slot">${slotsObj[3] == undefined ? "" : slotsObj[3]}</label>
+                        <label class="slot">${slotsObj[2].time == undefined ? "" : slotsObj[2].time}</label>
+                        <label class="slot">${slotsObj[3].time == undefined ? "" : slotsObj[3].time}</label>
                         </div>
                       </div>`
         }
